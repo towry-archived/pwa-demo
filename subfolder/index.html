@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sub folder sw</title>
+	<script>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('./sw2.js', {
+				scope: '/subfolder/'
+			}).then(function (reg) {
+				console.log('subfolder ', reg);
+			}).catch(function (err) {
+				console.log('subfolder ', err);
+			})
+		}
+	</script>
+</head>
+<body>
+	<h1>subfolder</h1>
+</body>
+</html>
